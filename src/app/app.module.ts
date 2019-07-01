@@ -7,7 +7,9 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component'
+import {ROUTES} from "./app.routes";
 
 
 @NgModule({
@@ -15,12 +17,13 @@ import { HomeComponent } from './home/home.component'
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
