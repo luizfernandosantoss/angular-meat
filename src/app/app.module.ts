@@ -20,7 +20,8 @@ import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.compo
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import {ShoppingCartService} from './restaurant-detail/shopping-cart/shopping-cart.service'
 import {FormsModule} from '@angular/forms';
-import { OrderComponent } from './order/order.component'
+import { OrderComponent } from './order/order.component';
+import { InputComponent } from './shered/input/input.component'
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { OrderComponent } from './order/order.component'
     MenuItemComponent,
     ReviewsComponent,
     OrderComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
