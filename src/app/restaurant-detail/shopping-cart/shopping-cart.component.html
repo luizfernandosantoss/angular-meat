@@ -1,11 +1,10 @@
-<!--INICIO DO CARRINHO-->
 <div class="box box-solid">
   <div class="box-header">
     <i class="fa fa-shopping-cart"></i>
 
     <h3 class="box-title">Carrinho</h3>
   </div>
-  <!-- /.box-header -->
+
   <div class="box-body">
     <div *ngIf="!items().length">
         <p>
@@ -35,8 +34,7 @@
   <div class="box-footer" *ngIf="items().length">
     <div class="pull-right">
       <button (click)="clear()"  type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Limpar</button>
-      <a href="order.html" class="btn btn-success"><i class="fa fa-credit-card"></i> Fechar Pedido</a>
+      <a [routerLink]="['/order']" class="btn btn-success"><i class="fa fa-credit-card"></i> Fechar Pedido</a>
     </div>
   </div>
 </div>
-<!-- FIM DO CARRINHO -->

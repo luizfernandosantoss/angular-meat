@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core'
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
@@ -19,7 +19,8 @@ import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shoppin
 import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import {ShoppingCartService} from './restaurant-detail/shopping-cart/shopping-cart.service'
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { OrderComponent } from './order/order.component'
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import {FormsModule} from '@angular/forms'
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,7 @@ import {FormsModule} from '@angular/forms'
     RouterModule.forRoot(ROUTES),
     FormsModule
   ],
-  providers: [RestaurantsService,ShoppingCartService],
+  providers: [RestaurantsService,ShoppingCartService,{provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
