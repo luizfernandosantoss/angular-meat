@@ -10,7 +10,7 @@ export class OrderComponent implements OnInit {
   paymentOptions: RadioOption[] = [
       {label: "Dinheiro", value: "MON"},
       {label: "Cartão de Débito", value: "DEB"},
-      {label: "Cartão Refeição", value: "RED"}
+      {label: "Cartão Refeição", value: "REF"}
   ]
   constructor() { }
 
