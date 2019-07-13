@@ -21,7 +21,8 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import {ShoppingCartService} from './restaurant-detail/shopping-cart/shopping-cart.service'
 import {FormsModule} from '@angular/forms';
 import { OrderComponent } from './order/order.component';
-import { InputComponent } from './shered/input/input.component'
+import { InputComponent } from './shered/input/input.component';
+import { RadioComponent } from './shered/radio/radio.component'
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { InputComponent } from './shered/input/input.component'
     ReviewsComponent,
     OrderComponent,
     InputComponent,
+    RadioComponent,
   ],
   imports: [
     BrowserModule,
