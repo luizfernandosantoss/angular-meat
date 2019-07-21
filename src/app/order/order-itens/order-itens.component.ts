@@ -16,6 +16,8 @@ export class OrderItensComponent implements OnInit {
 
   ngOnInit() {
   }
+
+
   emitIncreaseQty(item: CartItem){
     this.increaseQty.emit(item)
   }

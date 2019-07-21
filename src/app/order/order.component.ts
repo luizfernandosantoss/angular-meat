@@ -18,6 +18,10 @@ export class OrderComponent implements OnInit {
 
   ngOnInit() {
   }
+  delivery:number = 8
+  itemsValue(): number {
+    return this.orderService.itemsValue()
+  }
   cartItems(): CartItem[] {
     return this.orderService.cartItens()
   }
@@ -30,6 +34,10 @@ export class OrderComponent implements OnInit {
   remove(item: CartItem){
     this.orderService.remove(item)
   }
+  checkOrder(order: any){
+    console.log(order)
+  }
+
 
 
 

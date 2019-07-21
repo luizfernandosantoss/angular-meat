@@ -22,6 +22,9 @@ export class OrderService {
   decreaseQty(item: CartItem){
     this.cartService.decreaseQty(item)
   }
-  
 
+
+  itemsValue() {
+    return this.cartService.total()
+  }
 }
