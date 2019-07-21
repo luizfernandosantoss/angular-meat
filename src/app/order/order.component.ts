@@ -3,6 +3,7 @@ import {RadioOption} from '../shered/radio/radio-option.model'
 import {OrderService} from './order.service'
 import {CartItem} from '../restaurant-detail/shopping-cart/cart-item.model'
 import {Order, OrderItem} from './order.model'
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'mt-order',
@@ -15,7 +16,7 @@ export class OrderComponent implements OnInit {
       {label: "Cartão de Débito", value: "DEB"},
       {label: "Cartão Refeição", value: "REF"}
   ]
-  constructor(private orderService: OrderService) { }
+  constructor(private orderService: OrderService, private  router: Router) { }
 
   ngOnInit() {
   }
@@ -40,6 +41,7 @@ export class OrderComponent implements OnInit {
       (item:CartItem)=>new OrderItem(item.quantity,item.menuItem.id)
     )
     this.orderService.checkOrder(order).subscribe((orderId: string) => {
+      this.router.navigate(['/order-summary'])
       console.log(`Compra concluida: ${orderId}`)
       this.orderService.clear()
     })
