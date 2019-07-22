@@ -4,14 +4,15 @@ import {OrderService} from './order.service'
 import {CartItem} from '../restaurant-detail/shopping-cart/cart-item.model'
 import {Order, OrderItem} from './order.model'
 import {Router} from '@angular/router'
-import {FormBuilder, FormGroup} from '@angular/forms'
+import {FormBuilder, FormGroup, Validators} from '@angular/forms'
 
 @Component({
   selector: 'mt-order',
   templateUrl: './order.component.html'
 })
 export class OrderComponent implements OnInit {
-
+  emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+  numberPattern = /^[0-9]*$/
   paymentOptions: RadioOption[] = [
       {label: "Dinheiro", value: "MON"},
       {label: "Cartão de Débito", value: "DEB"},
@@ -23,13 +24,13 @@ export class OrderComponent implements OnInit {
 
   ngOnInit() {
     this.orderForm = this.formBulder.group({
-      name: '',
-      email: this.formBulder.control(''),
-      emailConfirmation: this.formBulder.control(''),
-      andress: this.formBulder.control(''),
-      number: this.formBulder.control(''),
+      name: this.formBulder.control('',[Validators.required, Validators.minLength(5)]),
+      email: this.formBulder.control('',[Validators.required,Validators.pattern(this.emailPattern)]),
+      emailConfirmation: this.formBulder.control('',[Validators.required,Validators.pattern(this.emailPattern)]),
+      andress: this.formBulder.control('',[Validators.required, Validators.minLength(5)]),
+      number: this.formBulder.control('',[Validators.required,Validators.pattern(this.numberPattern)]),
       optinalAndress: this.formBulder.control(''),
-      paymentOption: this.formBulder.control('')
+      paymentOption: this.formBulder.control('',Validators.required)
 
     })
   }
