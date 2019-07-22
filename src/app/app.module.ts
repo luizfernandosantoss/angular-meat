@@ -18,15 +18,12 @@ import {ShoppingCartComponent} from './restaurant-detail/shopping-cart/shopping-
 import {MenuItemComponent} from './restaurant-detail/menu-item/menu-item.component'
 import {ReviewsComponent} from './restaurant-detail/reviews/reviews.component'
 import {ShoppingCartService} from './restaurant-detail/shopping-cart/shopping-cart.service'
-import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import {OrderComponent} from './order/order.component'
-import {InputComponent} from './shered/input/input.component'
-import {RadioComponent} from './shered/radio/radio.component'
 import {OrderItensComponent} from './order/order-itens/order-itens.component'
 import {OrderService} from './order/order.service'
 import {DeliveryCostsComponent} from './order/delivery-costs/delivery-costs.component'
 import {OrderSummaryComponent} from './order/order-summary/order-summary.component'
-import {RatingComponent} from './shered/rating/rating.component'
+import {SheredModule} from './shered/shered.module'
 
 
 @NgModule({
@@ -43,20 +40,16 @@ import {RatingComponent} from './shered/rating/rating.component'
     MenuItemComponent,
     ReviewsComponent,
     OrderComponent,
-    InputComponent,
-    RadioComponent,
     OrderItensComponent,
     DeliveryCostsComponent,
     OrderSummaryComponent,
-    RatingComponent,
 
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(ROUTES),
-    FormsModule,
-    ReactiveFormsModule
+    SheredModule
   ],
   providers: [RestaurantsService,
     ShoppingCartService,
