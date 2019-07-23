@@ -18,10 +18,7 @@ import {ShoppingCartComponent} from './restaurant-detail/shopping-cart/shopping-
 import {MenuItemComponent} from './restaurant-detail/menu-item/menu-item.component'
 import {ReviewsComponent} from './restaurant-detail/reviews/reviews.component'
 import {ShoppingCartService} from './restaurant-detail/shopping-cart/shopping-cart.service'
-import {OrderComponent} from './order/order.component'
-import {OrderItensComponent} from './order/order-itens/order-itens.component'
 import {OrderService} from './order/order.service'
-import {DeliveryCostsComponent} from './order/delivery-costs/delivery-costs.component'
 import {OrderSummaryComponent} from './order/order-summary/order-summary.component'
 import {SheredModule} from './shered/shered.module'
 
@@ -39,11 +36,7 @@ import {SheredModule} from './shered/shered.module'
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent,
-    OrderItensComponent,
-    DeliveryCostsComponent,
-    OrderSummaryComponent,
-
+    OrderSummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +48,6 @@ import {SheredModule} from './shered/shered.module'
     ShoppingCartService,
     OrderService,
     {provide: LOCALE_ID, useValue: 'pt-BR'}],
-  bootstrap: [AppComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
