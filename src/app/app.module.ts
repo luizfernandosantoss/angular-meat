@@ -18,7 +18,6 @@ import {MenuItemComponent} from './restaurant-detail/menu-item/menu-item.compone
 import {ReviewsComponent} from './restaurant-detail/reviews/reviews.component'
 import {OrderSummaryComponent} from './order/order-summary/order-summary.component'
 import {SheredModule} from './shered/shered.module'
-import {CoreModule} from './core/core.module'
 
 
 @NgModule({
@@ -39,9 +38,11 @@ import {CoreModule} from './core/core.module'
   imports: [
     BrowserModule,
     HttpModule,
-    CoreModule,
     RouterModule.forRoot(ROUTES),
-    SheredModule
+    //Para importar somente o SheredModule
+    // SheredModule
+    //Para importar o sheredModulo e os providers
+    SheredModule.forRoot()
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt-BR'}],
