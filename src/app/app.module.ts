@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser'
 import {LOCALE_ID, NgModule} from '@angular/core'
 import {HttpModule} from '@angular/http'
-import {RouterModule} from '@angular/router'
+import {PreloadAllModules, RouterModule} from '@angular/router'
 
 
 import {AppComponent} from './app.component'
@@ -38,7 +38,7 @@ import {SheredModule} from './shered/shered.module'
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forRoot(ROUTES,{preloadingStrategy:PreloadAllModules}),
     //Para importar somente o SheredModule
     // SheredModule
     //Para importar o sheredModulo e os providers
