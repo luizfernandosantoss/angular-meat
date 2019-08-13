@@ -25,9 +25,9 @@
 `json-server db.json`
 
 ### iniciando a instalação  
-npm install --save @angular/animations@4.0.0
+`npm install --save @angular/animations@4.0.0`
 
-npm install --save web-animations-js
+`npm install --save web-animations-js`
 
 ## Goodies
 

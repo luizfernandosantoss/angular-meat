@@ -19,6 +19,7 @@ import {ReviewsComponent} from './restaurant-detail/reviews/reviews.component'
 import {OrderSummaryComponent} from './order/order-summary/order-summary.component'
 import {SheredModule} from './shered/shered.module'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {NotificationService} from './shered/messages/notification.service'
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     MenuItemComponent,
     ReviewsComponent,
     OrderSummaryComponent
+
   ],
   imports: [
     BrowserModule,
