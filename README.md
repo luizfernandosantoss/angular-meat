@@ -24,6 +24,11 @@
 
 `json-server db.json`
 
+### iniciando a instalação  
+npm install --save @angular/animations@4.0.0
+
+npm install --save web-animations-js
+
 ## Goodies
 
 Expressões regulares usadas na validação de formulários
@@ -142,6 +147,3 @@ Dependências dos pacotes que devem ficar em package.json:
   }
 ```
 
-## Créditos
-
-Todas as imagens usadas na aplicação são pertencentes a freepik.com

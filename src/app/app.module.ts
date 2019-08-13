@@ -18,6 +18,7 @@ import {MenuItemComponent} from './restaurant-detail/menu-item/menu-item.compone
 import {ReviewsComponent} from './restaurant-detail/reviews/reviews.component'
 import {OrderSummaryComponent} from './order/order-summary/order-summary.component'
 import {SheredModule} from './shered/shered.module'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import {SheredModule} from './shered/shered.module'
   imports: [
     BrowserModule,
     HttpModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES,{preloadingStrategy:PreloadAllModules}),
     //Para importar somente o SheredModule
     // SheredModule
