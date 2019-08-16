@@ -19,7 +19,8 @@ import {ReviewsComponent} from './restaurant-detail/reviews/reviews.component'
 import {OrderSummaryComponent} from './order/order-summary/order-summary.component'
 import {SheredModule} from './shered/shered.module'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {NotificationService} from './shered/messages/notification.service'
+import {NotificationService} from './shered/messages/notification.service';
+import { NotFoundComponent } from './not-found/not-found.component'
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {NotificationService} from './shered/messages/notification.service'
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderSummaryComponent
+    OrderSummaryComponent,
+    NotFoundComponent
 
   ],
   imports: [
